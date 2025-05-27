@@ -24,10 +24,10 @@
           <a class="nav-link active" aria-current="page" href="{%url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About-us</a>
+          <a class="nav-link" href="{%url 'about' %}">About-us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact-us</a>
+          <a class="nav-link" href="{%url 'contact' %}">Contact-us</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -37,6 +37,10 @@
     </div>
   </div>
 </nav>
+
+{% block content %}
+<h2>This is Home Page</h2>
+{% endblock content %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 
