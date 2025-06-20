@@ -10,3 +10,17 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+    
+from django.db import models
+
+class Sample(models.Model):
+    # Fields of the model
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    author=models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    # Optional: String representation of the object
+    def __str__(self):
+        return self.title
