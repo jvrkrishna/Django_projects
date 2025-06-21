@@ -4,6 +4,7 @@ from datetime import datetime
 class Post(models.Model):
     title=models.CharField(max_length=150)
     description=models.TextField()
+    img=models.ImageField(upload_to='Images/')
     author=models.CharField(max_length=50)
     created_at=models.DateTimeField(default=datetime.now)
     is_published=models.BooleanField(default=False)

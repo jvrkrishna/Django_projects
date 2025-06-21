@@ -5,5 +5,11 @@
 {% endblock title %}
 
 {% block content %}
-<h2>This is App1 Page</h2>
+{% for i in posts %}
+    <h3>{{i.title}}</h3>
+    <i>{{i.created_at}}</i>
+    <h4>{{i.author}}</h4>
+    <p>{{i.description}}</p>
+    <img src="{{i.img.url}}" alt="Image not found" width='200' height='200'>
+{% endfor %}
 {% endblock content %}
