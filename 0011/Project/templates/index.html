@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>HOME</title>
+    </head>
+    <body bgcolor="red">
+        <h3>Home Page</h3>
+        <button type="button"><a href="{% url 'home' %}">HOME</a></button>
+        <button type="button"><a href="{% url 'register' %}">Register</a></button>
+        <button type="button"><a href="{% url 'login' %}">LOGIN</a></button>
+        <button type="button"><a href="{% url 'logout' %}">LOGOUT</a></button>
+
+        {{request.user}}
+    </body>
+</html>
